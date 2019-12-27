@@ -1,1 +1,1 @@
-{"questions":[{"id":1,"category":"","level":"","question":"This is my firt question","type":"check","showNumAnswers":true,"options":["falseans1","trueans1","falseans2","trueans2","trueans3"],"answers":["trueans1","trueans2","trueans3"]}]}
+{"questions":[{"id":1,"category":"","level":"","question":"This is my firt question","type":"checkbox","showNumAnswers":true,"options":["falseans1","trueans1","falseans2","trueans2","trueans3"],"answers":["trueans1","trueans2","trueans3"]}]}
