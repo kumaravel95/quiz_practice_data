@@ -1,1 +1,407 @@
-{"testMillis":1200000,"testTime":true,"ref":"https://www.journaldev.com/15161/core-java-quiz","questions":[{"id":1,"category":"","level":"","question":"Which of the below is valid way to instantiate an array in java?","type":"radio","showNumAnswers":false,"options":["int myArray [] = {1, 3, 5};","int myArray [] [] = {1,2,3,4};","int [] myArray = (5, 4, 3);","int [] myArray = {\"1\", \"2\", \"3\"};"],"answers":["int myArray [] = {1, 3, 5};"],"answerDescription":"int [] myArray = {\"1\", \"2\", \"3\"}; is invalid because String can't be converted to int. int [] myArray = (5, 4, 3); is invalid because array elements are defined in curly braces ({}). int myArray [] [] = {1,2,3,4}; is invalid because myArray is a two dimensional array whereas it's being defined as one dimensional array. Compiler will complain as Type mismatch: cannot convert from int to int[]."},{"id":1,"category":"","level":"","question":"Which of the below are reserved keyword in java?","type":"checkbox","showNumAnswers":true,"options":["array","null","goto","int"],"answers":["int","goto"],"answerDescription":""},{"id":1,"category":"","level":"","question":"What will happen if we try to compile and run below program?","program":"interface Foo{\\n  int x = 10;\\n}\\n\\npublic class Test {\\n\\n  public static void main(String[] args) {\\n    Foo.x = 20;\\n    System.out.println(Foo.x);\\n    \\n  }\\n\\n}","type":"radio","showNumAnswers":false,"options":["Prints 10","Prints 20","Compile Time Error","Runtime error because Foo.x is final."],"answers":["Compile Time Error"],"answerDescription":"By default, any field of the interface is public, static and final. So we can't change is, hence compile-time error at line 8 statement <b>Foo.x = 20;</b>."},{"id":1,"category":"","level":"","question":"What will be the output of the below program?","program":"\npublic class Test {\n\n  public static void main(String[] args) {\n    \n    char c = 65;\n    System.out.println(\"c = \"+c);\n  }\n\n}\n","type":"radio","showNumAnswers":false,"options":["Compile Time Error","Prints \"c = A\"","Runtime Error","rints \"c = 65\""],"answers":["Prints \"c = A\""],"answerDescription":"Java compiler tries to automatically convert int to char. Since 65 gets converted to A, hence output will be \"c = A\". Note that char are limited to values from \u0000 to ￿. So <b>char c = 65535;</b> is valid but char <b>c = 65536;</b> will give compile time error."},{"id":1,"category":"","level":"","question":"What will be output of below program?","program":"\npublic class Test {\n\n  public void main(String[] args) {\n    \n    int x = 10*20-20;\n    \n    System.out.println(x);\n  }\n\n}\n","type":"radio","showNumAnswers":false,"options":["Runtime Error","Prints 180","Prints 0","Compile time error."],"answers":["Runtime Error"],"answerDescription":"Runtime error because main method is not static."},{"id":1,"category":"","level":"","question":"What are the valid statements for static keyword in java?","type":"checkbox","showNumAnswers":true,"options":["We can have static block in a class.","static block in class is executed every time an object of class is created.","We can have static method implementations in interface.","We can define static block inside a method."],"answers":["We can have static block in a class.","We can have static method implementations in interface."],"answerDescription":"We can have static block in a class, it gets executed only once when class loads. From java 8 onwards, we can have static method implementations in interfaces."},{"id":1,"category":"","level":"","question":"Select all the core concepts of OOPS.","type":"checkbox","showNumAnswers":true,"options":["Abstraction","Inheritance","Interface","Polymorphism","Generics"],"answers":["Abstraction","Inheritance","Polymorphism"],"answerDescription":"OOPS core concepts are; Abstraction, Encapsulation, Polymorphism, Inheritance, Composition, Association, Aggregation"},{"id":1,"category":"","level":"","question":"Which of the following statements are true for inheritance in java?","type":"radio","showNumAnswers":false,"options":["\"extend\" keyword is used to extend a class in java.","You can extend multiple classes in java.","Private members of superclass are accessible to subclass.","We can’t extend Final classes in java."],"answers":["We can’t extend Final classes in java."],"answerDescription":"Inheritance is one of the core concepts in Java. You should be familiar with it."},{"id":1,"category":"","level":"","question":"What will be the output of below program?","program":"\npackage com.journaldev.java;\n\npublic class Test {\n\n  public static void main(String[] args) {\n    Super s = new Subclass();\n    s.foo();\n  }\n}\n\nclass Super {\n  void\nfoo() {\n    System.out.println(\"Super\");\n  }\n}\n\nclass Subclass extends Super {\n  static void foo() {\n    System.out.println(\"Subclass\");\n  }\n\n}\n","type":"radio","showNumAnswers":false,"options":["Compile time error","Super","Subclass","Runtime error"],"answers":["Compile time error"],"answerDescription":"Subclass foo() method can't be static, it will give compile time error <b>This static method cannot hide the instance method from Super</b>."},{"id":1,"category":"","level":"","question":"What will be the output of below program?","program":"\npublic class Test {\n\n  public static void main(String[] args) {\n    Subclass s1 = new Subclass();\n    s1.foo(); //line 7\n    \n    Super s = new Subclass();\n  \ns.foo(); // line 10\n  }\n}\n\nclass Super {\n  private void foo() {\n    System.out.println(\"Super\");\n  }\n}\n\nclass Subclass extends Super {\n  public void foo() {\n  \nSystem.out.println(\"Subclass\");\n  }\n}","type":"radio","showNumAnswers":false,"options":["Compile time error at line 7","Compile time error at line 10","Compile time error at both line 7 and 10","Works fine and prints \"Subclass\" two times."],"answers":["Compile time error at line 10"],"answerDescription":"Compile time error at line 10 because Super class foo() method is private. Below code snippet shows the compilation error for Java 9."},{"id":1,"category":"","level":"","question":"What will be the output of below program?","program":"\nimport java.io.IOException;\n\npublic class Test {\n\n  public static void main(String[] args) {\n    try {\n      throw new IOException(\"Hello\");\n    }catch(IOException\n| Exception e) {\n      System.out.println(e.getMessage());\n    }\n  }\n}\n","type":"radio","showNumAnswers":false,"options":["Compile time error","Prints \"Hello\"","Runtime Error"],"answers":["Compile time error"],"answerDescription":"Compile time error as <b>The exception IOException is already caught by the alternative Exception</b>"},{"id":1,"category":"","level":"","question":"What will be the output of below program?","program":"\npublic class Test {\n\n  public static void main(String[] args) {\n    String x = \"abc\";\n    String y = \"abc\";\n    x.concat(y);\n    System.out.print(x);\n  }\n}\n","type":"radio","showNumAnswers":false,"options":["abcabc","abc","null"],"answers":["abc"],"answerDescription":"<b>x.concat(y);</b> will create a new string but it's not assigned to x, so value of x is not changed."},{"id":1,"category":"","level":"","question":"Which of the below are unchecked exceptions in java?","type":"checkbox","showNumAnswers":true,"options":["RuntimeException","ClassCastException","NullPointerException","IOException"],"answers":["RuntimeException","ClassCastException","NullPointerException"],"answerDescription":"RuntimeException and its subclasses are unchecked exceptions. Unchecked exceptions do not need to be declared in a method or constructor's throws clause."},{"id":1,"category":"","level":"","question":"What will be the output of below program?","program":"import java.io.IOException;\n\npublic class Test {\n\n  public static void main(String[] args) {\n    try {\n      throw new Exception(\"Hello \");\n    }catch(Exception e)\n{\n      System.out.print(e.getMessage());\n    } catch(IOException e) {\n      System.out.print(e.getMessage());\n    } finally {\n    \nSystem.out.println(\"World\");\n    }\n  }\n}","type":"radio","showNumAnswers":false,"options":["Compile time error","Hello","Hello World","Hello Hello World"],"answers":["Compile time error"],"answerDescription":"Compile-time error <b>Unreachable catch block for IOException. It is already handled by the catch block for Exception</b>."},{"id":1,"category":"","level":"","question":"Which of the following statement(s) are true for java?","type":"checkbox","showNumAnswers":true,"options":["JVM is responsible to converting Byte code to the machine specific code.","We only need JRE to run java programs.","JDK is required to compile java programs.","JRE doesn't contains JVM."],"answers":["JVM is responsible to converting Byte code to the machine specific code.","We only need JRE to run java programs.","JDK is required to compile java programs."],"answerDescription":""},{"id":1,"category":"","level":"","question":"Can we have two main methods in a java class?","type":"radio","showNumAnswers":false,"options":["Yes","No"],"answers":["Yes"],"answerDescription":"This was a tricky question. We can have multiple main methods in java through method overloading."},{"id":1,"category":"","level":"","question":"Which of the following statements are true about annotations in java?","type":"checkbox","showNumAnswers":true,"options":["@interface keyword is used to create custom annotation","@Override is a built-in annotation in java","Annotations can't be applied to fields in a class.","@Retention is one of the meta annotation in java.","Java annotation information gets lost when class is compiled."],"answers":["@interface keyword is used to create custom annotation","@Override is a built-in annotation in java","@Retention is one of the meta annotation in java."],"answerDescription":""},{"id":1,"category":"","level":"","question":"Which of the following statements are true about Enum in java?","type":"radio","showNumAnswers":true,"options":["All java enum implicitly extends java.lang.Enum class.","Java enum can implement interfaces.","We can create instance of enum using new operator.","Enums can't be used in switch statements.","Enum constants are implicitly static and final."],"answers":["All java enum implicitly extends java.lang.Enum class.","Java enum can implement interfaces.","Enum constants are implicitly static and final."],"answerDescription":""},{"id":1,"category":"","level":"","question":"Which of the below are built-in class loaders in java?","type":"checkbox","showNumAnswers":true,"options":["Bootstrap Class Loader","Extensions Class Loader","Runtime Class Loader","System Class Loader"],"answers":["Bootstrap Class Loader","Extensions Class Loader","System Class Loader"],"answerDescription":""},{"id":1,"category":"","level":"","question":"What will be the output of below program?","program":"public class Test {\n\n  public static String toString(){\n    System.out.println(\"Test toString called\");\n    return \"\";\n  }\n  \n  public static void main(String args[]){\n    System.out.println(toString());\n  }\n}","type":"radio","showNumAnswers":false,"options":["\"Test toString called\"","Compile time error","\"Test@7fh2bd8\" (Object class toString() method is being called)"],"answers":["Compile time error"],"answerDescription":"We will get a compile-time error because we can’t have an Object class method overridden with the static keyword. Note that Object class has <b>toString()</b> method. You will get a compile-time error as \"This static method cannot hide the instance method from Object\"."},{"id":1,"category":"","level":"","question":"What will be the output of below program?","program":"\npublic class Test {\n\n  public static void main(String[] args) {\n    String s1 = \"abc\";\n    String s2 = \"abc\";\n    System.out.println(\"s1 == s2 is:\" + s1 == s2);\n  }\n}\n","type":"radio","showNumAnswers":false,"options":["s1 == s2 is:true","false","s1 == s2 is:false","true"],"answers":["false"],"answerDescription":"The given statements output will be \"false\" because in java + operator precedence is more than == operator. So the given expression will be evaluated to \"s1 == s2 is:abc\" == \"abc\" i.e false."}]}
+{
+	"testMillis": 1200000,
+	"testTime": true,
+	"ref": "https://www.journaldev.com/15161/core-java-quiz",
+	"questions": [
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Which of the below is valid way to instantiate an array in java?",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"int myArray [] = {1, 3, 5};",
+				"int myArray [] [] = {1,2,3,4};",
+				"int [] myArray = (5, 4, 3);",
+				"int [] myArray = {\"1\", \"2\", \"3\"};"
+			],
+			"answers": [
+				"int myArray [] = {1, 3, 5};"
+			],
+			"answerDescription": "int [] myArray = {\"1\", \"2\", \"3\"}; is invalid because String can't be converted to int. int [] myArray = (5, 4, 3); is invalid because array elements are defined in curly braces ({}). int myArray [] [] = {1,2,3,4}; is invalid because myArray is a two dimensional array whereas it's being defined as one dimensional array. Compiler will complain as Type mismatch: cannot convert from int to int[]."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Which of the below are reserved keyword in java?",
+			"type": "checkbox",
+			"showNumAnswers": true,
+			"options": [
+				"array",
+				"null",
+				"goto",
+				"int"
+			],
+			"answers": [
+				"int",
+				"goto"
+			],
+			"answerDescription": ""
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will happen if we try to compile and run below program?",
+			"program": "interface Foo{\\n  int x = 10;\\n}\\n\\npublic class Test {\\n\\n  public static void main(String[] args) {\\n    Foo.x = 20;\\n    System.out.println(Foo.x);\\n    \\n  }\\n\\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Prints 10",
+				"Prints 20",
+				"Compile Time Error",
+				"Runtime error because Foo.x is final."
+			],
+			"answers": [
+				"Compile Time Error"
+			],
+			"answerDescription": "By default, any field of the interface is public, static and final. So we can't change is, hence compile-time error at line 8 statement <b>Foo.x = 20;</b>."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will be the output of the below program?",
+			"program": "\npublic class Test {\n\n  public static void main(String[] args) {\n    \n    char c = 65;\n    System.out.println(\"c = \"+c);\n  }\n\n}\n",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Compile Time Error",
+				"Prints \"c = A\"",
+				"Runtime Error",
+				"rints \"c = 65\""
+			],
+			"answers": [
+				"Prints \"c = A\""
+			],
+			"answerDescription": "Java compiler tries to automatically convert int to char. Since 65 gets converted to A, hence output will be \"c = A\". Note that char are limited to values from \u0000 to ￿. So <b>char c = 65535;</b> is valid but char <b>c = 65536;</b> will give compile time error."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will be output of below program?",
+			"program": "\npublic class Test {\n\n  public void main(String[] args) {\n    \n    int x = 10*20-20;\n    \n    System.out.println(x);\n  }\n\n}\n",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Runtime Error",
+				"Prints 180",
+				"Prints 0",
+				"Compile time error."
+			],
+			"answers": [
+				"Runtime Error"
+			],
+			"answerDescription": "Runtime error because main method is not static."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What are the valid statements for static keyword in java?",
+			"type": "checkbox",
+			"showNumAnswers": true,
+			"options": [
+				"We can have static block in a class.",
+				"static block in class is executed every time an object of class is created.",
+				"We can have static method implementations in interface.",
+				"We can define static block inside a method."
+			],
+			"answers": [
+				"We can have static block in a class.",
+				"We can have static method implementations in interface."
+			],
+			"answerDescription": "We can have static block in a class, it gets executed only once when class loads. From java 8 onwards, we can have static method implementations in interfaces."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Select all the core concepts of OOPS.",
+			"type": "checkbox",
+			"showNumAnswers": true,
+			"options": [
+				"Abstraction",
+				"Inheritance",
+				"Interface",
+				"Polymorphism",
+				"Generics"
+			],
+			"answers": [
+				"Abstraction",
+				"Inheritance",
+				"Polymorphism"
+			],
+			"answerDescription": "OOPS core concepts are; Abstraction, Encapsulation, Polymorphism, Inheritance, Composition, Association, Aggregation"
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Which of the following statements are true for inheritance in java?",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"\"extend\" keyword is used to extend a class in java.",
+				"You can extend multiple classes in java.",
+				"Private members of superclass are accessible to subclass.",
+				"We can’t extend Final classes in java."
+			],
+			"answers": [
+				"We can’t extend Final classes in java."
+			],
+			"answerDescription": "Inheritance is one of the core concepts in Java. You should be familiar with it."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will be the output of below program?",
+			"program": "\npackage com.journaldev.java;\n\npublic class Test {\n\n  public static void main(String[] args) {\n    Super s = new Subclass();\n    s.foo();\n  }\n}\n\nclass Super {\n  void\nfoo() {\n    System.out.println(\"Super\");\n  }\n}\n\nclass Subclass extends Super {\n  static void foo() {\n    System.out.println(\"Subclass\");\n  }\n\n}\n",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Compile time error",
+				"Super",
+				"Subclass",
+				"Runtime error"
+			],
+			"answers": [
+				"Compile time error"
+			],
+			"answerDescription": "Subclass foo() method can't be static, it will give compile time error <b>This static method cannot hide the instance method from Super</b>."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will be the output of below program?",
+			"program": "\npublic class Test {\n\n  public static void main(String[] args) {\n    Subclass s1 = new Subclass();\n    s1.foo(); //line 7\n    \n    Super s = new Subclass();\n  \ns.foo(); // line 10\n  }\n}\n\nclass Super {\n  private void foo() {\n    System.out.println(\"Super\");\n  }\n}\n\nclass Subclass extends Super {\n  public void foo() {\n  \nSystem.out.println(\"Subclass\");\n  }\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Compile time error at line 7",
+				"Compile time error at line 10",
+				"Compile time error at both line 7 and 10",
+				"Works fine and prints \"Subclass\" two times."
+			],
+			"answers": [
+				"Compile time error at line 10"
+			],
+			"answerDescription": "Compile time error at line 10 because Super class foo() method is private. Below code snippet shows the compilation error for Java 9."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will be the output of below program?",
+			"program": "\nimport java.io.IOException;\n\npublic class Test {\n\n  public static void main(String[] args) {\n    try {\n      throw new IOException(\"Hello\");\n    }catch(IOException\n| Exception e) {\n      System.out.println(e.getMessage());\n    }\n  }\n}\n",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Compile time error",
+				"Prints \"Hello\"",
+				"Runtime Error"
+			],
+			"answers": [
+				"Compile time error"
+			],
+			"answerDescription": "Compile time error as <b>The exception IOException is already caught by the alternative Exception</b>"
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will be the output of below program?",
+			"program": "\npublic class Test {\n\n  public static void main(String[] args) {\n    String x = \"abc\";\n    String y = \"abc\";\n    x.concat(y);\n    System.out.print(x);\n  }\n}\n",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"abcabc",
+				"abc",
+				"null"
+			],
+			"answers": [
+				"abc"
+			],
+			"answerDescription": "<b>x.concat(y);</b> will create a new string but it's not assigned to x, so value of x is not changed."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Which of the below are unchecked exceptions in java?",
+			"type": "checkbox",
+			"showNumAnswers": true,
+			"options": [
+				"RuntimeException",
+				"ClassCastException",
+				"NullPointerException",
+				"IOException"
+			],
+			"answers": [
+				"RuntimeException",
+				"ClassCastException",
+				"NullPointerException"
+			],
+			"answerDescription": "RuntimeException and its subclasses are unchecked exceptions. Unchecked exceptions do not need to be declared in a method or constructor's throws clause."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will be the output of below program?",
+			"program": "import java.io.IOException;\n\npublic class Test {\n\n  public static void main(String[] args) {\n    try {\n      throw new Exception(\"Hello \");\n    }catch(Exception e)\n{\n      System.out.print(e.getMessage());\n    } catch(IOException e) {\n      System.out.print(e.getMessage());\n    } finally {\n    \nSystem.out.println(\"World\");\n    }\n  }\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Compile time error",
+				"Hello",
+				"Hello World",
+				"Hello Hello World"
+			],
+			"answers": [
+				"Compile time error"
+			],
+			"answerDescription": "Compile-time error <b>Unreachable catch block for IOException. It is already handled by the catch block for Exception</b>."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Which of the following statement(s) are true for java?",
+			"type": "checkbox",
+			"showNumAnswers": true,
+			"options": [
+				"JVM is responsible to converting Byte code to the machine specific code.",
+				"We only need JRE to run java programs.",
+				"JDK is required to compile java programs.",
+				"JRE doesn't contains JVM."
+			],
+			"answers": [
+				"JVM is responsible to converting Byte code to the machine specific code.",
+				"We only need JRE to run java programs.",
+				"JDK is required to compile java programs."
+			],
+			"answerDescription": ""
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Can we have two main methods in a java class?",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Yes",
+				"No"
+			],
+			"answers": [
+				"Yes"
+			],
+			"answerDescription": "This was a tricky question. We can have multiple main methods in java through method overloading."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Which of the following statements are true about annotations in java?",
+			"type": "checkbox",
+			"showNumAnswers": true,
+			"options": [
+				"@interface keyword is used to create custom annotation",
+				"@Override is a built-in annotation in java",
+				"Annotations can't be applied to fields in a class.",
+				"@Retention is one of the meta annotation in java.",
+				"Java annotation information gets lost when class is compiled."
+			],
+			"answers": [
+				"@interface keyword is used to create custom annotation",
+				"@Override is a built-in annotation in java",
+				"@Retention is one of the meta annotation in java."
+			],
+			"answerDescription": ""
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Which of the following statements are true about Enum in java?",
+			"type": "radio",
+			"showNumAnswers": true,
+			"options": [
+				"All java enum implicitly extends java.lang.Enum class.",
+				"Java enum can implement interfaces.",
+				"We can create instance of enum using new operator.",
+				"Enums can't be used in switch statements.",
+				"Enum constants are implicitly static and final."
+			],
+			"answers": [
+				"All java enum implicitly extends java.lang.Enum class.",
+				"Java enum can implement interfaces.",
+				"Enum constants are implicitly static and final."
+			],
+			"answerDescription": ""
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "Which of the below are built-in class loaders in java?",
+			"type": "checkbox",
+			"showNumAnswers": true,
+			"options": [
+				"Bootstrap Class Loader",
+				"Extensions Class Loader",
+				"Runtime Class Loader",
+				"System Class Loader"
+			],
+			"answers": [
+				"Bootstrap Class Loader",
+				"Extensions Class Loader",
+				"System Class Loader"
+			],
+			"answerDescription": ""
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will be the output of below program?",
+			"program": "public class Test {\n\n  public static String toString(){\n    System.out.println(\"Test toString called\");\n    return \"\";\n  }\n  \n  public static void main(String args[]){\n    System.out.println(toString());\n  }\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"\"Test toString called\"",
+				"Compile time error",
+				"\"Test@7fh2bd8\" (Object class toString() method is being called)"
+			],
+			"answers": [
+				"Compile time error"
+			],
+			"answerDescription": "We will get a compile-time error because we can’t have an Object class method overridden with the static keyword. Note that Object class has <b>toString()</b> method. You will get a compile-time error as \"This static method cannot hide the instance method from Object\"."
+		},
+		{
+			"id": 1,
+			"category": "",
+			"level": "",
+			"question": "What will be the output of below program?",
+			"program": "\npublic class Test {\n\n  public static void main(String[] args) {\n    String s1 = \"abc\";\n    String s2 = \"abc\";\n    System.out.println(\"s1 == s2 is:\" + s1 == s2);\n  }\n}\n",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"s1 == s2 is:true",
+				"false",
+				"s1 == s2 is:false",
+				"true"
+			],
+			"answers": [
+				"false"
+			],
+			"answerDescription": "The given statements output will be \"false\" because in java + operator precedence is more than == operator. So the given expression will be evaluated to \"s1 == s2 is:abc\" == \"abc\" i.e false."
+		}
+	]
+}
