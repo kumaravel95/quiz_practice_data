@@ -8,7 +8,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "True", "False" ],
-    "answers" : [ "B" ],
+    "answers" : [ "False" ],
     "selected" : null,
     "answerDescription" : "*ptr++ increments the pointer and not the value, whereas the ++*ptr increments the value being pointed by ptr"
   }, {
@@ -20,7 +20,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "True", "False" ],
-    "answers" : [ "A" ],
+    "answers" : [ "True" ],
     "selected" : null,
     "answerDescription" : "C doesn't do array bounds checking at compile time, hence this compiles. But, the modern compilers like Turbo C++ detects this as 'Error: Too many initializers'. GCC would give you a warning."
   }, {
@@ -32,7 +32,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "True", "False" ],
-    "answers" : [ "B" ],
+    "answers" : [ "False" ],
     "selected" : null,
     "answerDescription" : "This program will NOT report any error. (Tested in Turbo C under DOS and GCC under Linux) The output: 10.000000"
   }, {
@@ -44,7 +44,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "True", "False" ],
-    "answers" : [ "B" ],
+    "answers" : [ "False" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   } ],

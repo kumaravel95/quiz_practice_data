@@ -8,7 +8,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "Error: invalid assignment for x", "Error: suspicious pointer conversion", "No error", "None of above" ],
-    "answers" : [ "C" ],
+    "answers" : [ "No error" ],
     "selected" : null,
     "answerDescription" : "While reading the code there is no error, but upon running the program having an unitialised variable can cause the program to crash (Null pointer assignment)."
   }, {
@@ -20,7 +20,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "Error: Declaration syntax", "Error: Expression syntax", "Error: LValue required", "Error: Rvalue required" ],
-    "answers" : [ "C" ],
+    "answers" : [ "Error: LValue required" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   } ],

@@ -8,7 +8,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "Yes", "No" ],
-    "answers" : [ "B" ],
+    "answers" : [ "No" ],
     "selected" : null,
     "answerDescription" : "NULL is #defined as 0 in the 'stdio.h' file. Thus, both p and t are NULL pointers."
   }, {
@@ -20,7 +20,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "Yes", "No" ],
-    "answers" : [ "B" ],
+    "answers" : [ "No" ],
     "selected" : null,
     "answerDescription" : "The correct way is char *q=0 (or) char *q=(char*)0"
   }, {
@@ -32,7 +32,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "Yes", "No" ],
-    "answers" : [ "B" ],
+    "answers" : [ "No" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   }, {
@@ -44,7 +44,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "Yes", "No" ],
-    "answers" : [ "B" ],
+    "answers" : [ "No" ],
     "selected" : null,
     "answerDescription" : "Error in statement k++. We cannot perform arithmetic on void pointers. The following error will be displayed while compiling above program in TurboC. Compiling PROGRAM.C: Error PROGRAM.C 8: Size of the type is unknown or zero."
   }, {
@@ -56,7 +56,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "Yes", "No" ],
-    "answers" : [ "B" ],
+    "answers" : [ "No" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   } ],

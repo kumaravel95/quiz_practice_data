@@ -8,7 +8,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "float **fun(float***);", "float *fun(float**);", "float fun(float***);", "float ****fun(float***);" ],
-    "answers" : [ "D" ],
+    "answers" : [ "float ****fun(float***);" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   }, {
@@ -20,7 +20,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "j and i are pointers to an int", "i is a pointer to an int and stores address of j", "j is a pointer to an int and stores address of i", "j is a pointer to a pointer to an int and stores address of i" ],
-    "answers" : [ "C" ],
+    "answers" : [ "j is a pointer to an int and stores address of i" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   }, {
@@ -32,7 +32,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "It prints ASCII value of the binary number present in the first byte of a float variable a.", "It prints character equivalent of the binary number present in the first byte of a float variable a.", "It will print 3", "It will print a garbage value" ],
-    "answers" : [ "A" ],
+    "answers" : [ "It prints ASCII value of the binary number present in the first byte of a float variable a." ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   }, {
@@ -44,7 +44,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "**k=a;", "k=&a;", "*k=&a", "&k=*a" ],
-    "answers" : [ "C" ],
+    "answers" : [ "*k=&a" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   }, {
@@ -56,7 +56,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "k is a pointer to a pointer to a pointer to a char", "k is a pointer to a pointer to a pointer to a pointer to a char", "k is a pointer to a char pointer", "k is a pointer to a pointer to a char" ],
-    "answers" : [ "B" ],
+    "answers" : [ "k is a pointer to a pointer to a pointer to a pointer to a char" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   }, {
@@ -68,7 +68,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "Output: Garbage value", "Output: 1", "Output: 3", "Error: Invalid indirection" ],
-    "answers" : [ "D" ],
+    "answers" : [ "Error: Invalid indirection" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   }, {
@@ -80,7 +80,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "*pt='';", "pt='\\0';", "pt='\\n';", "*pt='\\0';" ],
-    "answers" : [ "D" ],
+    "answers" : [ "*pt='\\0';" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   }, {
@@ -92,7 +92,7 @@
     "type" : "radio",
     "showNumAnswers" : false,
     "options" : [ "j=s;", "*j=s;", "*j=&s;", "&j=s;" ],
-    "answers" : [ "B" ],
+    "answers" : [ "*j=s;" ],
     "selected" : null,
     "answerDescription" : "No answer description available for this question. Let us discuss."
   } ],
