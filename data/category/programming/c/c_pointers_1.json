@@ -1,0 +1,372 @@
+{
+  "questions": [
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Point out the compile time error in the program given below.",
+      "program": "#include<stdio.h>\n\nint main()\n{\n    int *x;\n    *x=100;\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "Error: invalid assignment for x",
+        "Error: suspicious pointer conversion",
+        "No error",
+        "None of above"
+      ],
+      "answers": [
+        "No error"
+      ],
+      "selected": null,
+      "answerDescription": "While reading the code there is no error, but upon running the program having an unitialised variable can cause the program to crash (Null pointer assignment)."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Point out the error in the program",
+      "program": "#include<stdio.h>\n\nint main()\n{\n    int a[] = {10, 20, 30, 40, 50};\n    int j;\n    for(j=0; j<5; j++)\n    {\n        printf(\"%d\\n\", a);\n        a++;\n    }\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "Error: Declaration syntax",
+        "Error: Expression syntax",
+        "Error: LValue required",
+        "Error: Rvalue required"
+      ],
+      "answers": [
+        "Error: LValue required"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Are the expression *ptr++ and ++*ptr are same?",
+      "program": null,
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "True",
+        "False"
+      ],
+      "answers": [
+        "False"
+      ],
+      "selected": null,
+      "answerDescription": "*ptr++ increments the pointer and not the value, whereas the ++*ptr increments the value being pointed by ptr"
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Will the program compile?",
+      "program": "#include<stdio.h>\nint main()\n{\n    char str[5] = \"IndiaBIX\";\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "True",
+        "False"
+      ],
+      "answers": [
+        "True"
+      ],
+      "selected": null,
+      "answerDescription": "C doesn't do array bounds checking at compile time, hence this compiles. But, the modern compilers like Turbo C++ detects this as 'Error: Too many initializers'. GCC would give you a warning."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "The following program reports an error on compilation.",
+      "program": "#include<stdio.h>\nint main()\n{\n    float i=10, *j;\n    void *k;\n    k=&i;\n    j=k;\n    printf(\"%f\\n\", *j);\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "True",
+        "False"
+      ],
+      "answers": [
+        "False"
+      ],
+      "selected": null,
+      "answerDescription": "This program will NOT report any error. (Tested in Turbo C under DOS and GCC under Linux) The output: 10.000000"
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Are the three declarations char **apple, char *apple[], and char apple[][] same?",
+      "program": null,
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "True",
+        "False"
+      ],
+      "answers": [
+        "False"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Which of the following statements correctly declare a function that receives a pointer to pointer to a pointer to a float and returns a pointer to a pointer to a pointer to a pointer to a float?",
+      "program": null,
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "float **fun(float***);",
+        "float *fun(float**);",
+        "float fun(float***);",
+        "float ****fun(float***);"
+      ],
+      "answers": [
+        "float ****fun(float***);"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Which of the statements is correct about the program?",
+      "program": "#include<stdio.h>\n\nint main()\n{\n    int i=10;\n    int *j=&i;\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "j and i are pointers to an int",
+        "i is a pointer to an int and stores address of j",
+        "j is a pointer to an int and stores address of i",
+        "j is a pointer to a pointer to an int and stores address of i"
+      ],
+      "answers": [
+        "j is a pointer to an int and stores address of i"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Which of the statements is correct about the program?",
+      "program": "#include<stdio.h>\n\nint main()\n{\n    float a=3.14;\n    char *j;\n    j = (char*)&a;\n    printf(\"%d\\n\", *j);\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "It prints ASCII value of the binary number present in the first byte of a float variable a.",
+        "It prints character equivalent of the binary number present in the first byte of a float variable a.",
+        "It will print 3",
+        "It will print a garbage value"
+      ],
+      "answers": [
+        "It prints ASCII value of the binary number present in the first byte of a float variable a."
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "In the following program add a statement in the function fun() such that address of a gets stored in j?",
+      "program": "#include<stdio.h>\nint main()\n{\n    int *j;\n    void fun(int**);\n    fun(&j);\n    return 0;\n}\nvoid fun(int **k)\n{\n    int a=10;\n    /* Add a statement here */\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "**k=a;",
+        "k=&a;",
+        "*k=&a",
+        "&k=*a"
+      ],
+      "answers": [
+        "*k=&a"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Which of the following statements correct about k used in the below statement? char ****k;",
+      "program": null,
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "k is a pointer to a pointer to a pointer to a char",
+        "k is a pointer to a pointer to a pointer to a pointer to a char",
+        "k is a pointer to a char pointer",
+        "k is a pointer to a pointer to a char"
+      ],
+      "answers": [
+        "k is a pointer to a pointer to a pointer to a pointer to a char"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Which of the statements is correct about the program?",
+      "program": "#include<stdio.h>\n\nint main()\n{\n    int arr[3][3] = {1, 2, 3, 4};\n    printf(\"%d\\n\", *(*(*(arr))));\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "Output: Garbage value",
+        "Output: 1",
+        "Output: 3",
+        "Error: Invalid indirection"
+      ],
+      "answers": [
+        "Error: Invalid indirection"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Which statement will you add to the following program to ensure that the program outputs \"IndiaBIX\" on execution?",
+      "program": "#include<stdio.h>\n\nint main()\n{\n    char s[] = \"IndiaBIX\";\n    char t[25];\n    char *ps, *pt;\n    ps = s;\n    pt = t;\n    while(*ps)\n        *pt++ = *ps++;\n\n    /* Add a statement here */\n    printf(\"%s\\n\", t);\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "*pt='';",
+        "pt='\\0';",
+        "pt='\\n';",
+        "*pt='\\0';"
+      ],
+      "answers": [
+        "*pt='\\0';"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "In the following program add a statement in the function fact() such that the factorial gets stored in j.",
+      "program": "#include<stdio.h>\nvoid fact(int*);\n\nint main()\n{\n    int i=5;\n    fact(&i);\n    printf(\"%d\\n\", i);\n    return 0;\n}\nvoid fact(int *j)\n{\n    static int s=1;\n    if(*j!=0)\n    {\n        s = s**j;\n        *j = *j-1;\n        fact(j);\n        /* Add a statement here */\n    }\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "j=s;",
+        "*j=s;",
+        "*j=&s;",
+        "&j=s;"
+      ],
+      "answers": [
+        "*j=s;"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Is there any difference between the following two statements? char *p=0; char *t=NULL;",
+      "program": null,
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answers": [
+        "No"
+      ],
+      "selected": null,
+      "answerDescription": "NULL is #defined as 0 in the 'stdio.h' file. Thus, both p and t are NULL pointers."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Is this a correct way for NULL pointer assignment? int i=0; char *q=(char*)i;",
+      "program": null,
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answers": [
+        "No"
+      ],
+      "selected": null,
+      "answerDescription": "The correct way is char *q=0 (or) char *q=(char*)0"
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Is the NULL pointer same as an uninitialised pointer?",
+      "program": null,
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answers": [
+        "No"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Will the program compile in Turbo C?",
+      "program": "#include<stdio.h>\nint main()\n{\n    int a=10, *j;\n    void *k;\n    j=k=&a;\n    j++;\n    k++;\n    printf(\"%u %u\\n\", j, k);\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answers": [
+        "No"
+      ],
+      "selected": null,
+      "answerDescription": "Error in statement k++. We cannot perform arithmetic on void pointers. The following error will be displayed while compiling above program in TurboC. Compiling PROGRAM.C: Error PROGRAM.C 8: Size of the type is unknown or zero."
+    },
+    {
+      "id": null,
+      "category": null,
+      "level": null,
+      "question": "Will the following program give any warning on compilation in TurboC (under DOS)?",
+      "program": "#include<stdio.h>\n\nint main()\n{\n    int *p1, i=25;\n    void *p2;\n    p1=&i;\n    p2=&i;\n    p1=p2;\n    p2=p1;\n    return 0;\n}",
+      "type": "radio",
+      "showNumAnswers": false,
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answers": [
+        "No"
+      ],
+      "selected": null,
+      "answerDescription": "No answer description available for this question. Let us discuss."
+    }
+  ],
+  "currentIndex": 0,
+  "testMillis": 0,
+  "testTime": false,
+  "remainingTimeInitialized": false,
+  "remainingTestMillis": 0,
+  "ref": "https://www.indiabix.com/c-programming/pointers/040001"
+}

@@ -10,25 +10,7 @@
 		},
 		{
 			"name": "Pointers - 2",
-			"url": "category/programming/c/pointers2.json",
-			"image": "",
-			"hasSubCategory": false
-		},
-		{
-			"name": "Pointers - 3",
-			"url": "category/programming/c/pointers3.json",
-			"image": "",
-			"hasSubCategory": false
-		},
-		{
-			"name": "Pointers - 4",
-			"url": "category/programming/c/pointers4.json",
-			"image": "",
-			"hasSubCategory": false
-		},
-		{
-			"name": "Pointers - 5",
-			"url": "category/programming/c/pointers5.json",
+			"url": "category/programming/c/c_pointers_1.json",
 			"image": "",
 			"hasSubCategory": false
 		}

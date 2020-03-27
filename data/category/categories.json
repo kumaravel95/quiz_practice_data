@@ -7,13 +7,6 @@
 			"url": "category/programming/programming.json",
 			"image": "category/categories.png?raw=true",
 			"hasSubCategory": true
-		},
-		{
-			"name": "Quantitative Aptitude",
-			"url": "category/quantitative/quantitative.json",
-			"image": "category/categories.png?raw=true",
-			"hasSubCategory": true,
-			"date": "2020-03-10T20:52:36Z"
 		}
 	]
 }
