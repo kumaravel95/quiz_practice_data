@@ -1,1 +1,12 @@
-{"image":"category/categories.png?raw=true","title":"Practice\nExams","categories":[{"name":"Programming","url":"category/programming/programming.json","image":"category/categories.png?raw=true","hasSubCategory":true}]}
+{
+	"image": "category/categories.png?raw=true",
+	"title": "Practice\nExams",
+	"categories": [
+		{
+			"name": "Programming",
+			"url": "category/programming/programming.json",
+			"image": "category/categories.png?raw=true",
+			"hasSubCategory": true
+		}
+	]
+}

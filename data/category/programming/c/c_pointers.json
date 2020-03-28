@@ -1,1 +1,465 @@
-{"questions":[{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    static char *s[] = {\"black\", \"white\", \"pink\", \"violet\"};\n    char **ptr[] = {s+3, s+2, s+1, s}, ***p;\n    p = ptr;\n    ++p;\n    printf(\"%s\", **p+1);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["ink","ack","ite","let"],"answers":["ink"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    int i=3, *j, k;\n    j = &i;\n    printf(\"%d\\n\", i**j*i+*j);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["30","27","9","3"],"answers":["30"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    int x=30, *y, *z;\n    y=&x; /* Assume address of x is 500 and integer is 4 byte size */\n    z=y;\n    *y++=*z++;\n    x++;\n    printf(\"x=%d, y=%d, z=%d\\n\", x, y, z);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["x=31, y=502, z=502","x=31, y=500, z=500","x=31, y=498, z=498","x=31, y=504, z=504"],"answers":["x=31, y=504, z=504"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    char str[20] = \"Hello\";\n    char *const p=str;\n    *p='M';\n    printf(\"%s\\n\", str);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["Mello","Hello","HMello","MHello"],"answers":["Mello"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program If the integer is 4bytes long?","program":"#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int ***r, **q, *p, i=8;\r\n    p = &i;\r\n    q = &p;\r\n    r = &q;\r\n    printf(\"%d, %d, %d\\n\", *p, **q, ***r);\r\n    return 0;\r\n}","type":"radio","showNumAnswers":false,"options":["8, 8, 8","4000, 4002, 4004","4000, 4004, 4008","4000, 4008, 4016"],"answers":["8, 8, 8"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\r\n\r\nvoid fun(void *p);\r\nint i;\r\n\r\nint main()\r\n{\r\n    void *vptr;\r\n    vptr = &i;\r\n    fun(vptr);\r\n    return 0;\r\n}\r\nvoid fun(void *p)\r\n{\r\n    int **q;\r\n    q = (int**)&p;\r\n    printf(\"%d\\n\", **q);\r\n}","type":"radio","showNumAnswers":false,"options":["Error: cannot convert from void** to int**","Garbage value","0","No output"],"answers":["0"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    char *str;\n    str = \"%s\";\n    printf(str, \"K\\n\");\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["Error","No output","K","%s"],"answers":["K"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\nint *check(static int, static int);\n\nint main()\n{\n    int *c;\n    c = check(10, 20);\n    printf(\"%d\\n\", c);\n    return 0;\n}\nint *check(static int i, static int j)\n{\n    int *p, *q;\n    p = &i;\n    q = &j;\n    if(i >= 45)\n        return (p);\n    else\n        return (q);\n}","type":"radio","showNumAnswers":false,"options":["10","20","Error: Non portable pointer conversion","Error: cannot use static for function parameters"],"answers":["Error: cannot use static for function parameters"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program if the size of pointer is 4-bytes?","program":"#include<stdio.h>\n\nint main()\n{\n    printf(\"%d, %d\\n\", sizeof(NULL), sizeof(\"\"));\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["2, 1","2, 2","4, 1","4, 2"],"answers":["4, 1"],"selected":null,"answerDescription":"In TurboC, the output will be 2, 1 because the size of the pointer is 2 bytes in 16-bit platform. But in Linux, the output will be 4, 1 because the size of the pointer is 4 bytes. This difference is due to the platform dependency of C compiler."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    void *vp;\n    char ch=74, *cp=\"JACK\";\n    int j=65;\n    vp=&ch;\n    printf(\"%c\", *(char*)vp);\n    vp=&j;\n    printf(\"%c\", *(int*)vp);\n    vp=cp;\n    printf(\"%s\", (char*)vp+2);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["JCK","J65K","JAK","JACK"],"answers":["JACK"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program?","program":"#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int arr[2][2][2] = {10, 2, 3, 4, 5, 6, 7, 8};\r\n    int *p, *q;\r\n    p = &arr[1][1][1];\r\n    q = (int*) arr;\r\n    printf(\"%d, %d\\n\", *p, *q);\r\n    return 0;\r\n}","type":"radio","showNumAnswers":false,"options":["8, 10","10, 2","8, 1","Garbage values"],"answers":["8, 10"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program assuming that the array begins at the location 1002 and size of an integer is 4 bytes?","program":"#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int a[3][4] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };\r\n    printf(\"%u, %u, %u\\n\", a[0]+1, *(a[0]+1), *(*(a+0)+1));\r\n    return 0;\r\n}","type":"radio","showNumAnswers":false,"options":["448, 4, 4","520, 2, 2","1006, 2, 2","Error"],"answers":["1006, 2, 2"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program?","program":"#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int arr[3] = {2, 3, 4};\r\n    char *p;\r\n    p = arr;\r\n    p = (char*)((int*)(p));\r\n    printf(\"%d, \", *p);\r\n    p = (int*)(p+1);\r\n    printf(\"%d\", *p);\r\n    return 0;\r\n}","type":"radio","showNumAnswers":false,"options":["2, 3","2, 0","2, Garbage value","0, 0"],"answers":["2, 0"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    char *str;\n    str = \"%d\\n\";\n    str++;\n    str++;\n    printf(str-2, 300);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["No output","30","3","300"],"answers":["300"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    printf(\"%c\\n\", 7[\"IndiaBIX\"]);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["Error: in printf","Nothing will print","print \"X\" of IndiaBIX","print \"7\""],"answers":["print \"X\" of IndiaBIX"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    char str[] = \"peace\";\n    char *s = str;\n    printf(\"%s\\n\", s++ +3);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["peace","eace","ace","ce"],"answers":["ce"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    char *p;\n    p=\"hello\";\n    printf(\"%s\\n\", *&*&p);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["llo","hello","ello","h"],"answers":["hello"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program assuming that the array begins at location 1002?","program":"#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int a[2][3][4] = { {1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1, 2}, \r\n                       {2, 1, 4, 7, 6, 7, 8, 9, 0, 0, 0, 0} };\r\n    printf(\"%u, %u, %u, %d\\n\", a, *a, **a, ***a);\r\n    return 0;\r\n}","type":"radio","showNumAnswers":false,"options":["1002, 2004, 4008, 2","2004, 4008, 8016, 1","1002, 1002, 1002, 1","Error"],"answers":["1002, 1002, 1002, 1"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\npower(int**);\nint main()\n{\n    int a=5, *aa; /* Address of 'a' is 1000 */\n    aa = &a;\n    a = power(&aa);\n    printf(\"%d\\n\", a);\n    return 0;\n}\npower(int **ptr)\n{\n    int b;\n    b = **ptr***ptr;\n    return (b);\n}","type":"radio","showNumAnswers":false,"options":["5","25","125","Garbage value"],"answers":["25"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    char str1[] = \"India\";\n    char str2[] = \"BIX\";\n    char *s1 = str1, *s2=str2;\n    while(*s1++ = *s2++)\n        printf(\"%s\", str1);\n\n    printf(\"\\n\");\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["IndiaBIX","BndiaBIdiaBIXia","India","(null)"],"answers":["BndiaBIdiaBIXia"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n#include<string.h>\n\nint main()\n{\n    int i, n;\n    char *x=\"Alice\";\n    n = strlen(x);\n    *x = x[n];\n    for(i=0; i<=n; i++)\n    {\n        printf(\"%s \", x);\n        x++;\n    }\n    printf(\"\\n\", x);\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["Alice","ecilA","Alice lice ice ce e","lice ice ce e"],"answers":["lice ice ce e"],"selected":null,"answerDescription":"If you compile and execute this program in windows platform with Turbo C, it will give \"lice ice ce e\". It may give different output in other platforms (depends upon compiler and machine). The online C compiler given in this site will give the Option C as output (it runs on Linux platform)."},{"id":null,"category":null,"level":null,"question":"What will be the output of the program ?","program":"#include<stdio.h>\n\nint main()\n{\n    int i, a[] = {2, 4, 6, 8, 10};\n    change(a, 5);\n    for(i=0; i<=4; i++)\n        printf(\"%d, \", a[i]);\n    return 0;\n}\nvoid change(int *b, int n)\n{\n    int i;\n    for(i=0; i<n; i++)\n        *(b+1) = *(b+i)+5;\n}","type":"radio","showNumAnswers":false,"options":["7, 9, 11, 13, 15","2, 15, 6, 8, 10","2 4 6 8 10","3, 1, -1, -3, -5"],"answers":["2, 15, 6, 8, 10"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."},{"id":null,"category":null,"level":null,"question":"If the size of integer is 4bytes, What will be the output of the program?","program":"#include<stdio.h>\n\nint main()\n{\n    int arr[] = {12, 13, 14, 15, 16};\n    printf(\"%d, %d, %d\\n\", sizeof(arr), sizeof(*arr), sizeof(arr[0]));\n    return 0;\n}","type":"radio","showNumAnswers":false,"options":["10, 2, 4","20, 4, 4","16, 2, 2","20, 2, 2"],"answers":["20, 4, 4"],"selected":null,"answerDescription":"No answer description available for this question. Let us discuss."}],"ref":"https://www.indiabix.com/c-programming/pointers/038001"}
+{
+	"questions": [
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    static char *s[] = {\"black\", \"white\", \"pink\", \"violet\"};\n    char **ptr[] = {s+3, s+2, s+1, s}, ***p;\n    p = ptr;\n    ++p;\n    printf(\"%s\", **p+1);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"ink",
+				"ack",
+				"ite",
+				"let"
+			],
+			"answers": [
+				"ink"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    int i=3, *j, k;\n    j = &i;\n    printf(\"%d\\n\", i**j*i+*j);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"30",
+				"27",
+				"9",
+				"3"
+			],
+			"answers": [
+				"30"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    int x=30, *y, *z;\n    y=&x; /* Assume address of x is 500 and integer is 4 byte size */\n    z=y;\n    *y++=*z++;\n    x++;\n    printf(\"x=%d, y=%d, z=%d\\n\", x, y, z);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"x=31, y=502, z=502",
+				"x=31, y=500, z=500",
+				"x=31, y=498, z=498",
+				"x=31, y=504, z=504"
+			],
+			"answers": [
+				"x=31, y=504, z=504"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    char str[20] = \"Hello\";\n    char *const p=str;\n    *p='M';\n    printf(\"%s\\n\", str);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Mello",
+				"Hello",
+				"HMello",
+				"MHello"
+			],
+			"answers": [
+				"Mello"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program If the integer is 4bytes long?",
+			"program": "#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int ***r, **q, *p, i=8;\r\n    p = &i;\r\n    q = &p;\r\n    r = &q;\r\n    printf(\"%d, %d, %d\\n\", *p, **q, ***r);\r\n    return 0;\r\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"8, 8, 8",
+				"4000, 4002, 4004",
+				"4000, 4004, 4008",
+				"4000, 4008, 4016"
+			],
+			"answers": [
+				"8, 8, 8"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\r\n\r\nvoid fun(void *p);\r\nint i;\r\n\r\nint main()\r\n{\r\n    void *vptr;\r\n    vptr = &i;\r\n    fun(vptr);\r\n    return 0;\r\n}\r\nvoid fun(void *p)\r\n{\r\n    int **q;\r\n    q = (int**)&p;\r\n    printf(\"%d\\n\", **q);\r\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Error: cannot convert from void** to int**",
+				"Garbage value",
+				"0",
+				"No output"
+			],
+			"answers": [
+				"0"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    char *str;\n    str = \"%s\";\n    printf(str, \"K\\n\");\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Error",
+				"No output",
+				"K",
+				"%s"
+			],
+			"answers": [
+				"K"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\nint *check(static int, static int);\n\nint main()\n{\n    int *c;\n    c = check(10, 20);\n    printf(\"%d\\n\", c);\n    return 0;\n}\nint *check(static int i, static int j)\n{\n    int *p, *q;\n    p = &i;\n    q = &j;\n    if(i >= 45)\n        return (p);\n    else\n        return (q);\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"10",
+				"20",
+				"Error: Non portable pointer conversion",
+				"Error: cannot use static for function parameters"
+			],
+			"answers": [
+				"Error: cannot use static for function parameters"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program if the size of pointer is 4-bytes?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    printf(\"%d, %d\\n\", sizeof(NULL), sizeof(\"\"));\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"2, 1",
+				"2, 2",
+				"4, 1",
+				"4, 2"
+			],
+			"answers": [
+				"4, 1"
+			],
+			"selected": null,
+			"answerDescription": "In TurboC, the output will be 2, 1 because the size of the pointer is 2 bytes in 16-bit platform. But in Linux, the output will be 4, 1 because the size of the pointer is 4 bytes. This difference is due to the platform dependency of C compiler."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    void *vp;\n    char ch=74, *cp=\"JACK\";\n    int j=65;\n    vp=&ch;\n    printf(\"%c\", *(char*)vp);\n    vp=&j;\n    printf(\"%c\", *(int*)vp);\n    vp=cp;\n    printf(\"%s\", (char*)vp+2);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"JCK",
+				"J65K",
+				"JAK",
+				"JACK"
+			],
+			"answers": [
+				"JACK"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program?",
+			"program": "#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int arr[2][2][2] = {10, 2, 3, 4, 5, 6, 7, 8};\r\n    int *p, *q;\r\n    p = &arr[1][1][1];\r\n    q = (int*) arr;\r\n    printf(\"%d, %d\\n\", *p, *q);\r\n    return 0;\r\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"8, 10",
+				"10, 2",
+				"8, 1",
+				"Garbage values"
+			],
+			"answers": [
+				"8, 10"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program assuming that the array begins at the location 1002 and size of an integer is 4 bytes?",
+			"program": "#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int a[3][4] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };\r\n    printf(\"%u, %u, %u\\n\", a[0]+1, *(a[0]+1), *(*(a+0)+1));\r\n    return 0;\r\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"448, 4, 4",
+				"520, 2, 2",
+				"1006, 2, 2",
+				"Error"
+			],
+			"answers": [
+				"1006, 2, 2"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program?",
+			"program": "#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int arr[3] = {2, 3, 4};\r\n    char *p;\r\n    p = arr;\r\n    p = (char*)((int*)(p));\r\n    printf(\"%d, \", *p);\r\n    p = (int*)(p+1);\r\n    printf(\"%d\", *p);\r\n    return 0;\r\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"2, 3",
+				"2, 0",
+				"2, Garbage value",
+				"0, 0"
+			],
+			"answers": [
+				"2, 0"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    char *str;\n    str = \"%d\\n\";\n    str++;\n    str++;\n    printf(str-2, 300);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"No output",
+				"30",
+				"3",
+				"300"
+			],
+			"answers": [
+				"300"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    printf(\"%c\\n\", 7[\"IndiaBIX\"]);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Error: in printf",
+				"Nothing will print",
+				"print \"X\" of IndiaBIX",
+				"print \"7\""
+			],
+			"answers": [
+				"print \"X\" of IndiaBIX"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    char str[] = \"peace\";\n    char *s = str;\n    printf(\"%s\\n\", s++ +3);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"peace",
+				"eace",
+				"ace",
+				"ce"
+			],
+			"answers": [
+				"ce"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    char *p;\n    p=\"hello\";\n    printf(\"%s\\n\", *&*&p);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"llo",
+				"hello",
+				"ello",
+				"h"
+			],
+			"answers": [
+				"hello"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program assuming that the array begins at location 1002?",
+			"program": "#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int a[2][3][4] = { {1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1, 2}, \r\n                       {2, 1, 4, 7, 6, 7, 8, 9, 0, 0, 0, 0} };\r\n    printf(\"%u, %u, %u, %d\\n\", a, *a, **a, ***a);\r\n    return 0;\r\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"1002, 2004, 4008, 2",
+				"2004, 4008, 8016, 1",
+				"1002, 1002, 1002, 1",
+				"Error"
+			],
+			"answers": [
+				"1002, 1002, 1002, 1"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\npower(int**);\nint main()\n{\n    int a=5, *aa; /* Address of 'a' is 1000 */\n    aa = &a;\n    a = power(&aa);\n    printf(\"%d\\n\", a);\n    return 0;\n}\npower(int **ptr)\n{\n    int b;\n    b = **ptr***ptr;\n    return (b);\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"5",
+				"25",
+				"125",
+				"Garbage value"
+			],
+			"answers": [
+				"25"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    char str1[] = \"India\";\n    char str2[] = \"BIX\";\n    char *s1 = str1, *s2=str2;\n    while(*s1++ = *s2++)\n        printf(\"%s\", str1);\n\n    printf(\"\\n\");\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"IndiaBIX",
+				"BndiaBIdiaBIXia",
+				"India",
+				"(null)"
+			],
+			"answers": [
+				"BndiaBIdiaBIXia"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n#include<string.h>\n\nint main()\n{\n    int i, n;\n    char *x=\"Alice\";\n    n = strlen(x);\n    *x = x[n];\n    for(i=0; i<=n; i++)\n    {\n        printf(\"%s \", x);\n        x++;\n    }\n    printf(\"\\n\", x);\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"Alice",
+				"ecilA",
+				"Alice lice ice ce e",
+				"lice ice ce e"
+			],
+			"answers": [
+				"lice ice ce e"
+			],
+			"selected": null,
+			"answerDescription": "If you compile and execute this program in windows platform with Turbo C, it will give \"lice ice ce e\". It may give different output in other platforms (depends upon compiler and machine). The online C compiler given in this site will give the Option C as output (it runs on Linux platform)."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "What will be the output of the program ?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    int i, a[] = {2, 4, 6, 8, 10};\n    change(a, 5);\n    for(i=0; i<=4; i++)\n        printf(\"%d, \", a[i]);\n    return 0;\n}\nvoid change(int *b, int n)\n{\n    int i;\n    for(i=0; i<n; i++)\n        *(b+1) = *(b+i)+5;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"7, 9, 11, 13, 15",
+				"2, 15, 6, 8, 10",
+				"2 4 6 8 10",
+				"3, 1, -1, -3, -5"
+			],
+			"answers": [
+				"2, 15, 6, 8, 10"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		},
+		{
+			"id": null,
+			"category": null,
+			"level": null,
+			"question": "If the size of integer is 4bytes, What will be the output of the program?",
+			"program": "#include<stdio.h>\n\nint main()\n{\n    int arr[] = {12, 13, 14, 15, 16};\n    printf(\"%d, %d, %d\\n\", sizeof(arr), sizeof(*arr), sizeof(arr[0]));\n    return 0;\n}",
+			"type": "radio",
+			"showNumAnswers": false,
+			"options": [
+				"10, 2, 4",
+				"20, 4, 4",
+				"16, 2, 2",
+				"20, 2, 2"
+			],
+			"answers": [
+				"20, 4, 4"
+			],
+			"selected": null,
+			"answerDescription": "No answer description available for this question. Let us discuss."
+		}
+	],
+	"ref": "https://www.indiabix.com/c-programming/pointers/038001"
+}

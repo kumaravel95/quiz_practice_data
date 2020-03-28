@@ -1,1 +1,18 @@
-{"image":"category/programming/aws/aws.png?raw=true","title":"AWS Quiz's","categories":[{"name":"AWS Certified Big Data","url":"category/programming/aws/awscertifiedbigdata.json","image":"","hasSubCategory":false},{"name":"Solution Architect Associate - 1","url":"category/programming/aws/awssolutionarchitect1.json","image":"","hasSubCategory":false}]}
+{
+	"image": "category/programming/aws/aws.png?raw=true",
+	"title": "AWS Quiz's",
+	"categories": [
+		{
+			"name": "AWS Certified Big Data",
+			"url": "category/programming/aws/awscertifiedbigdata.json",
+			"image": "",
+			"hasSubCategory": false
+		},
+		{
+			"name": "Solution Architect Associate - 1",
+			"url": "category/programming/aws/awssolutionarchitect1.json",
+			"image": "",
+			"hasSubCategory": false
+		}
+	]
+}

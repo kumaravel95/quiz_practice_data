@@ -1,1 +1,24 @@
-{"image":"category/programming/c/c.png?raw=true","title":"C Programming","categories":[{"name":"Pointers - 1","url":"category/programming/c/c_pointers.json","image":"","hasSubCategory":false}]}
+{
+	"image": "category/programming/c/c.png?raw=true",
+	"title": "C Programming",
+	"categories": [
+		{
+			"name": "Declarations and Initializations",
+			"url": "category/programming/c/decinit/c_decinit.json",
+			"image": "",
+			"hasSubCategory": true
+		},
+		{
+			"name": "Pointers - 1",
+			"url": "category/programming/c/c_pointers.json",
+			"image": "",
+			"hasSubCategory": false
+		},
+		{
+			"name": "Pointers - 2",
+			"url": "category/programming/c/c_pointers_1.json",
+			"image": "",
+			"hasSubCategory": false
+		}
+	]
+}
