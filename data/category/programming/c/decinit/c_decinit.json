@@ -4,25 +4,25 @@
 	"categories": [
 		{
 			"name": "Part - 1",
-			"url": "category/programming/c/decinitc_decinit1.json",
+			"url": "category/programming/c/decinit/c_decinit1.json",
 			"image": "",
 			"hasSubCategory": false
 		},
 		{
 			"name": "Part - 2",
-			"url": "category/programming/c/decinitc_decinit2.json",
+			"url": "category/programming/c/decinit/c_decinit2.json",
 			"image": "",
 			"hasSubCategory": false
 		},
 		{
 			"name": "Part - 3",
-			"url": "category/programming/c/decinitc_decinit3.json",
+			"url": "category/programming/c/decinit/c_decinit3.json",
 			"image": "",
 			"hasSubCategory": false
 		},
 		{
 			"name": "Part - 4",
-			"url": "category/programming/c/decinitc_decinit4.json",
+			"url": "category/programming/c/decinit/c_decinit4.json",
 			"image": "",
 			"hasSubCategory": false
 		}
