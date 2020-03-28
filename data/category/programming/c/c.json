@@ -3,28 +3,10 @@
 	"title": "C Programming",
 	"categories": [
 		{
-			"name": "Declarations and Initializations - 1",
-			"url": "category/programming/c/c_decinit1.json",
+			"name": "Declarations and Initializations",
+			"url": "category/programming/c/decinit/decinit.json",
 			"image": "",
-			"hasSubCategory": false
-		},
-		{
-			"name": "Declarations and Initializations - 2",
-			"url": "category/programming/c/c_decinit2.json",
-			"image": "",
-			"hasSubCategory": false
-		},
-		{
-			"name": "Declarations and Initializations - 3",
-			"url": "category/programming/c/c_decinit3.json",
-			"image": "",
-			"hasSubCategory": false
-		},
-		{
-			"name": "Declarations and Initializations - 4",
-			"url": "category/programming/c/c_decinit4.json",
-			"image": "",
-			"hasSubCategory": false
+			"hasSubCategory": true
 		},
 		{
 			"name": "Pointers - 1",

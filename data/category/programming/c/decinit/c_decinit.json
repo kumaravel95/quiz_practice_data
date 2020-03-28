@@ -1,0 +1,30 @@
+{
+	"image": "category/programming/c/c.png?raw=true",
+	"title": "C - Declarations and Initializations",
+	"categories": [
+		{
+			"name": "Part - 1",
+			"url": "category/programming/c/decinitc_decinit1.json",
+			"image": "",
+			"hasSubCategory": false
+		},
+		{
+			"name": "Part - 2",
+			"url": "category/programming/c/decinitc_decinit2.json",
+			"image": "",
+			"hasSubCategory": false
+		},
+		{
+			"name": "Part - 3",
+			"url": "category/programming/c/decinitc_decinit3.json",
+			"image": "",
+			"hasSubCategory": false
+		},
+		{
+			"name": "Part - 4",
+			"url": "category/programming/c/decinitc_decinit4.json",
+			"image": "",
+			"hasSubCategory": false
+		}
+	]
+}
